@@ -6,4 +6,8 @@ cypress.run({
   if (result.status === 'failed') {
     process.exit(1);
   }
+}).catch(err => {
+  console.error("CAUGHT ERROR")
+  console.error(err)
+  process.exit(2)
 })
